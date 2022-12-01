@@ -43,13 +43,13 @@ def loadDataOther() -> list[int]:
     data = []
     heapify(data)
     with open("i.txt", "r") as f:
-        c = 0
+        calories = 0
         for line in f:
             if line != '\n':
-                c += int(line.strip())
+                calories += int(line.strip())
             else:
-                heappush(data, -1 * c)
-                c = 0
+                heappush(data, -1 * calories)
+                calories = 0
     return data
 
 
