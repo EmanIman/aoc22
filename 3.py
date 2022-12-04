@@ -17,10 +17,9 @@ def part1(data: list[str]) -> int:
     for rucksack in data:
         compartment1 = rucksack[:len(rucksack) // 2]
         compartment2 = rucksack[len(rucksack) // 2:]
-        sameChar = set(compartment1).intersection(set(compartment2))
+        # & is intersection operator for sets 
+        sameChar = set(compartment1) & set(compartment2)
         # loop or just call prioritie(*sameChar) to unpack, but this breaks if there are multiple characters in sameChars I do believe
-        # for char in sameChar:
-        #     sum += prioritie(char)
         sum += prioritie(*sameChar)
     return sum
 
@@ -29,7 +28,7 @@ def part2(data: list[str]) -> int:
     sum = 0
     for i in range(0, len(data) - 2, 3):
         sack1, sack2, sack3 = data[i], data[i + 1], data[i + 2]
-        sameChar = set(sack1).intersection(set(sack2).intersection(set(sack3)))
+        sameChar = set(sack1) & set(sack2) & set(sack3)
         sum += prioritie(*sameChar)
     return sum
 
