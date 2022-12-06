@@ -1,6 +1,6 @@
 def loadData() -> list[int]:
     data = []
-    with open("i.txt", "r") as f:
+    with open("1i.txt", "r") as f:
         calories = 0
         for line in f:
             if line != '\n':

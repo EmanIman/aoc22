@@ -1,6 +1,6 @@
 def loadData() -> list[str]:
     data = []
-    with open("i.txt", "r") as f:
+    with open("3i.txt", "r") as f:
         for line in f:
             data.append(line.strip())
     return data

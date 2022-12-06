@@ -2,7 +2,7 @@ points = {"W": 6, "T": 3, "L": 0, "X": 1, "Y": 2, "Z": 3}
 
 def loadData() -> list[tuple[str, str]]:
     data = []
-    with open("i.txt", "r") as f:
+    with open("2i.txt", "r") as f:
         for line in f:
             data.append((line[:1], line[2:3]))
     return data

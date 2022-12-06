@@ -3,7 +3,7 @@ from re import findall
 
 def loadData(crates: dict[str, deque]) -> list[list[str]]:
     data = []
-    with open("i.txt", "r") as f:
+    with open("5i.txt", "r") as f:
         reading_crates = True
         for line in f:
             if reading_crates:
